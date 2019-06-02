@@ -1,0 +1,161 @@
+.with-registerdiv
+{
+    padding-top:5px ;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    vertical-align:center;
+    margin : 0 auto;
+    width:90%;
+    height:90%;
+
+ 
+ }
+ .closeicon
+{
+    text-align: right;
+    color: gray;
+    font-size: 16px;
+    position: relative;
+    float: right
+}
+.closeicon:hover
+{
+    color:#359BBF;
+    cursor: pointer;
+}
+
+.signin
+{
+    height:30px;
+}
+
+.with-primarybutton
+{
+    flex: 1 1 auto;
+  /*  background-color:#D3996A;
+    color:#ffff;*/
+    margin-left:10px;
+    background-color:#061123;
+    color:#75c1e1;
+    border-color:#75c1e1;
+    border:1px solid;
+    
+}
+
+
+.with-primarybutton:disabled
+{
+    flex: 1 1 auto;
+  /*  background-color:#D3996A;
+    color:#ffff;*/
+    margin-left:10px;
+    background-color:#061123;
+    color:#75c1e1;
+    border-color:#75c1e1;
+    border:1px solid;
+    
+}
+
+
+
+.with-primarybutton:hover
+{
+    flex: 1 1 auto;
+  /*  background-color:#D3996A;
+    color:#ffff;*/
+    margin-left:10px;
+    background-color: #75c1e1;
+    color:#061123;
+    border-color:#061123;
+    border:1px solid;
+    
+}
+
+@media screen and (min-width:768px)
+{
+    .txtbox
+    {   padding-right:2%;
+        width:20%
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .txtbox
+    {   padding-right:2%;
+        width:35%
+    }
+}
+
+@media screen and (min-width:768px)
+{
+    .txtbox1
+    {  
+        width:80%
+    }
+}
+@media screen and (max-width:500px)
+{
+    .txtbox1
+    {  
+     width:65%
+    }
+}
+.link:hover
+{
+    cursor: pointer;
+}
+
+.with-panelbodydiv
+{
+    width:100%;
+    border:1px;
+    margin:0 auto;
+    
+}
+.with-panelform
+{
+    width:100%;
+    
+}
+.mat-input-element
+{
+    color:#359BBF;
+    font-size: 14px;
+    
+}
+
+.mat-icon-1
+{
+    color:#359BBF;
+    font-size:22px;
+}
+
+
+.divider
+{
+    padding-top:5px;
+    padding-bottom: 5px;
+    color:#359BBF;
+}
+
+.txt-header
+{
+    text-align: center;
+    font-size:16px;
+    color:#359BBF;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:25px;
+    font-weight: bold;
+}
+
+.placeholderText
+{
+    color:#359BBF;
+}
+
+.countryText
+{
+    color:white;
+}

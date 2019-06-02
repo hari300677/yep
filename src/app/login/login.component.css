@@ -1,0 +1,197 @@
+body
+{
+    font-family: 'Arial, Helvetica, sans-serif'; 
+    background-color:#94bcfc;
+}
+
+
+.mat-card
+{
+    width:100%;
+    height: 100%;
+    vertical-align: middle;
+    border:0px;
+}
+
+@media screen and (min-width:1024px)
+{
+.center-div
+{
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 70%;
+  border-radius: 3px;
+
+}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px)
+{
+.center-div
+{
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 70%;
+  border-radius: 3px;
+
+}
+}
+
+@media screen and (min-width:500px) and (max-width:768px)
+{
+.center-div
+{
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 70%;
+  border-radius: 3px;
+
+}
+}
+
+@media screen and(max-width:500px)
+{
+.center-div
+{
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 70%;
+  border-radius: 3px;
+
+}
+}
+
+@media screen and (max-width:500px)
+{
+.center-div
+{
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 70%;
+  border-radius: 3px;
+
+}
+}
+.with-panelbodydiv
+{
+    width:90%;
+    border:1px;
+    margin : 0 auto;
+    
+}
+.logo-div
+{
+    align-content: center;
+    height:20%;
+    padding:5px;
+    margin : 0 auto;
+    text-align: center;   
+}
+
+.with-panelform
+{
+    width:100%;
+    border:1px;
+    margin : 0 auto;
+   
+}
+
+.mat-icon
+{
+    color:#359BBF;
+}
+
+
+.with-primarybutton
+{
+    flex: 1 1 auto;
+    background-color:#D3996A;
+    color:#ffff;
+    
+}
+
+a.link
+{
+    padding:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#359BBF;
+    text-decoration: none;
+    
+}
+
+a.link:hover
+{
+    padding:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#BD8257;
+    text-decoration: underline;
+}
+
+
+.signin
+{
+    height:30px;
+}
+
+.link-div
+{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.right {
+    text-align: right;
+    float: right;
+}
+
+.mat-input-element
+{
+    color:#359BBF;
+    font-size: 14px;
+}
+
+
+.mat-label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+.avatar img
+{
+    width: 40%;
+    height: 20%;
+    margin :0 auto;    
+}
+
+.mat-form-field-infix
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    
+}

@@ -1,0 +1,29 @@
+{
+    "/api": {
+        "target": "http://127.0.0.1:8000",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/osapi": {
+        "target": "http://75.8.36.2",
+        "secure": false,
+        "pathRewrite": {
+            "^/osapi": ""
+        },
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/smsapi": {
+        "target": "https://sms.telnyx.com/messages",
+        "secure": false,
+        "pathRewrite": {
+            "^/smsapi": ""
+        },
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

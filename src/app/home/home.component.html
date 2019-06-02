@@ -1,0 +1,53 @@
+<body class="bg">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div><img src="../../assets/images/logo.jpg" class="img_logo"></div>
+      <span></span>
+      <!--<span class="headertext">YoooTa</span>-->
+      <span class="with-spacer"></span>
+      <button class="with-primarybutton" mat-raised-button>Sign In</button>&nbsp;&nbsp;
+      <button class="with-primarybutton" (click)="openRegisterDialog();" mat-raised-button>Register</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="centerdiv">
+    <div style="padding-bottom:15%;">
+      <span class="content">YoooTa End Points</span>
+    </div>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-card>
+            <mat-card-title class="matheader">Free</mat-card-title>
+            <mat-card-content>
+              <p class="matcontent">
+                Register to get your own free desktop in few clicks. Its customized with SMS notification and RDP.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-sm-4 ">
+          <mat-card>
+            <mat-card-title class="matheader">Server</mat-card-title>
+            <mat-card-content>
+              <p class="matcontent">
+                Promote your desktop to server anytime and access your application from anywhere.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-sm-4">
+          <mat-card>
+            <mat-card-title class="matheader">Backup</mat-card-title>
+            <mat-card-content>
+              <p class="matcontent">
+                Don't worry about your data backup as we encrypt and store multiple copies.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

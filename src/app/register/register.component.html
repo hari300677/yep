@@ -1,0 +1,139 @@
+<div class="container with-registerdiv">
+  <div>
+    <mat-icon class="closeicon" (click)="closeDialog(form)">close</mat-icon>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 txt-header">
+      <span>User Registration</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="container with-panelbodydiv">
+            <form id="frmRegister" name="frmRegister" #frmRegister="ngForm" class="with-panelform">
+              <div class="row">
+                <div class="col-sm-12">
+                  <mat-form-field appearance="outline" class="with-panelform">
+                    <mat-label class="placeholderText">First Name</mat-label>
+                    <input matInput name="first_name" id="first_name" #first_name="ngModel"
+                      [(ngModel)]="registerservice.formData.first_name" required placeholder="First Name">
+                    <mat-error>Please Enter Valid First Name</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <mat-form-field appearance="outline" class="with-panelform">
+                    <mat-label class="placeholderText">Last Name</mat-label>
+                    <input matInput name="last_name" id="last_name" #last_name="ngModel"
+                      [(ngModel)]="registerservice.formData.last_name" required placeholder="Last Name">
+                    <mat-error>Please Enter Valid Last Name</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <mat-form-field appearance="outline" class="with-panelform">
+                    <mat-label class="placeholderText">Email</mat-label>
+                    <input name="email" type="email" id="email" (focusout)="checkemail(frmRegister.form,email.value)"
+                      #email="ngModel" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z0-9.-]{2,}[.]{1}[a-zA-Z]{2,}"
+                      [(ngModel)]="registerservice.formData.email" matInput required placeholder="E-Mail">
+                    <mat-error *ngIf="!email.valid">{{emailerr}}</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <mat-form-field appearance="outline" class="with-panelform">
+                    <mat-label class="placeholderText">Country</mat-label>
+                    <mat-select name="COUNTRY" id="COUNTRY" [(ngModel)]="selectedCountryId"
+                      (selectionChange)="getSelectedCountry()" required placeholder="Country">
+                      <mat-option *ngFor="let cntry of countryData" [value]="cntry.id">
+                        {{cntry.country}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error>Please Select Country</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="with-panelform">
+                    <mat-form-field appearance="outline" class="txtbox">
+                      <mat-label class="placeholderText">Code</mat-label>
+                      <input matInput name="countrycode" id="countrycode" readonly value="{{selectedCountryCode}}"
+                        placeholder="Code">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="txtbox1">
+                      <mat-label class="placeholderText">Mobile Number</mat-label>
+                      <input matInput name="mobile_number" id="mobile_number" #mobile_number="ngModel"
+                        (focusout)="checkmobilenumber(frmRegister.form,mobile_number.value)"
+                        [(ngModel)]="registerservice.formData.mobile_number" pattern="[0-9]*" maxlength="12" required
+                        placeholder="Mobile Number">
+                      <mat-error *ngIf="!mobile_number.valid">{{mnumerr}}</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <mat-form-field appearance="outline" class="with-panelform">
+                    <mat-label class="placeholderText">User Name</mat-label>
+                    <input matInput name="login_user_name"
+                      (focusout)="checkuser(frmRegister.form,login_user_name.value)" id="login_user_name"
+                      #login_user_name="ngModel" [(ngModel)]="registerservice.formData.login_user_name" required
+                      placeholder="User Name">
+                    <mat-error *ngIf="!login_user_name.valid">{{usererr}}</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <mat-form-field appearance="outline" class="with-panelform">
+                    <mat-label class="placeholderText">Password</mat-label>
+                    <input matInput type="password" name="login_user_password" id="login_user_password"
+                      #login_user_password="ngModel" minlength="6"
+                      [(ngModel)]="registerservice.formData.login_user_password" required placeholder="Password">
+                    <mat-error *ngIf="login_user_password.errors?.required">Please Enter Password</mat-error>
+                    <mat-error *ngIf="login_user_password.errors?.minlength">Password
+                      must be 6 characters long
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <mat-form-field appearance="outline" class="with-panelform">
+                    <mat-label class="placeholderText">Confirm Password</mat-label>
+                    <input matInput type="password" name="cnfpassword"
+                      (focusout)="checkpassword(frmRegister.form,cnfpassword.value);" #cnfpassword="ngModel"
+                      [(ngModel)]="cnfpasswd" id="cnfpassword" placeholder="Confirm Password">
+                    <mat-error *ngIf="!cnfpassword.valid">{{passwderr}}</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row signin">
+                <div class="col-sm-12">
+                  <div>
+                    <button mat-raised-button id="btncancel" name="btncancel" (click)="closeDialog(form);"
+                      class="with-primarybutton" style="float:right;">Cancel</button>
+                  </div>
+                  <div style="padding-bottom:10px;">
+                    <button mat-raised-button id="btnsave" name="btnsave" (click)="saveData(frmRegister.form);"
+                      [disabled]="frmRegister.form.invalid" class="with-primarybutton"
+                      style="float:right;">Save</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
